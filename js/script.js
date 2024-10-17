@@ -14,6 +14,8 @@ document.getElementById("empezar").addEventListener("click", () => {
   document.getElementById("inicio").style.display = "none";
   document.getElementById("juego").style.display = "block";
   mostrarCartas();
+  // Inicializa el puntaje mostrado
+  document.getElementById("puntaje-actual").textContent = `${puntaje}`;
 });
 
 function mostrarCartas() {
@@ -77,6 +79,10 @@ function verificarRespuesta(pregunta, opcionSeleccionada) {
   }
 
   preguntasContestadas++;
+
+  // Actualiza el puntaje en la interfaz
+  document.getElementById("puntaje-actual").textContent = `${puntaje}`;
+
   $('#feedbackModal').modal('show');
 
   // Desaparece la ventana modal automáticamente después de 3 segundos
@@ -106,4 +112,5 @@ function reiniciarJuego() {
   preguntasDisponibles = [...preguntas];
   document.getElementById("inicio").style.display = "block";
   document.getElementById("juego").style.display = "none";
+  document.getElementById("puntaje-actual").textContent = `0`; // Reiniciar el puntaje mostrado
 }
