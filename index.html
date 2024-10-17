@@ -30,8 +30,8 @@
 
     #header-logos {
       display: flex;
-      flex-direction: column; /* Cambiado a columna para móviles */
-      align-items: center; /* Centrado horizontalmente */
+      justify-content: space-between;
+      align-items: center;
       padding: 10px;
       background-color: #302b63;
       border-radius: 10px;
@@ -41,12 +41,10 @@
     #logo-juego {
       width: 140px;
       animation: bounce 2s infinite;
-      margin-bottom: 10px; /* Espacio entre el logo y el texto */
     }
 
     #logo-institucion {
       width: 90px;
-      margin-top: 10px; /* Espacio entre el texto y el logo de la institución */
     }
 
     @keyframes bounce {
@@ -209,38 +207,6 @@
       font-size: 20px;
       color: #ffde03;
     }
-
-    @media (max-width: 600px) {
-      #header-logos {
-        padding: 20px; /* Aumentar padding para móviles */
-      }
-
-      #logo-juego {
-        width: 100px; /* Tamaño ajustado para pantallas más pequeñas */
-      }
-
-      #logo-institucion {
-        width: 60px; /* Tamaño ajustado para pantallas más pequeñas */
-      }
-
-      #header-logos p {
-        font-size: 14px; /* Tamaño de fuente ajustado para pantallas pequeñas */
-        line-height: 1.4; /* Espaciado entre líneas */
-        margin: 5px 0; /* Espacio entre párrafos */
-      }
-
-      .titulo {
-        font-size: 24px; /* Tamaño de título ajustado */
-      }
-
-      .nombre-juego {
-        font-size: 20px; /* Tamaño de nombre del juego ajustado */
-      }
-
-      #empezar {
-        font-size: 16px; /* Tamaño de botón ajustado */
-      }
-    }
   </style>
 </head>
 <body>
@@ -269,15 +235,28 @@
       <img id="logo-institucion" src="img/logo.png" alt="Instituto Ramón Copaja">
     </div>
     <h2>Selecciona una carta:</h2>
-    <div id="puntaje-container">Puntaje: <span id="puntaje">0</span></div>
-    <div class="cartas-container">
-      <!-- Aquí se generarán las cartas -->
+    <div id="puntaje-container">Puntaje: <span id="puntaje-actual">0</span></div> <!-- Contenedor para mostrar el puntaje -->
+    <div id="cartas" class="cartas-container"></div>
+    <button id="reiniciar">Reiniciar</button>
+  </div>
+
+  <div class="modal fade" id="feedbackModal" tabindex="-1" aria-labelledby="feedbackLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="feedbackLabel">Respuesta</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" id="feedbackMessage"></div>
+      </div>
     </div>
   </div>
 
-  <!-- Scripts de JavaScript -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/script.js"></script>
 </body>
 </html>
+
