@@ -1,9 +1,9 @@
 const preguntas = [
-  { pregunta: "¿Qué componente procesa datos?", opciones: ["CPU", "RAM", "HDD"], correcta: 0 },
-  { pregunta: "¿Qué es periférico de salida?", opciones: ["RAM", "Teclado", "Pantalla"], correcta: 2 },
-  { pregunta: "¿Almacena permanentemente?", opciones: ["RAM", "Disco", "CPU"], correcta: 1 },
-  { pregunta: "¿Componente para red?", opciones: ["Tarjeta de red", "Fuente", "Teclado"], correcta: 0 },
-  { pregunta: "¿Qué es periférico de entrada?", opciones: ["Teclado", "Monitor", "Altavoz"], correcta: 0 }
+ { pregunta: "¿Qué componente procesa datos?", opciones: ["CPU", "RAM", "HDD"], correcta: 0 },
+  { pregunta: "¿Cuál es un periférico de salida?", opciones: ["RAM", "Teclado", "Pantalla"], correcta: 2 },
+  { pregunta: "¿Qué almacena Datos permanentemente?", opciones: ["RAM", "HDD", "CPU"], correcta: 1 },
+  { pregunta: "¿Componente para una red?", opciones: ["Tarjeta de red", "Fuente", "Teclado"], correcta: 0 },
+  { pregunta: "¿Cuál es periférico de entrada?", opciones: ["Teclado", "Monitor", "Altavoz"], correcta: 0 }
 ];
 
 let puntaje = 0;
