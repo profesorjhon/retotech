@@ -201,6 +201,12 @@
     #reiniciar:hover {
       background-color: #ff79b0;
     }
+
+    #puntaje-container {
+      margin-top: 20px;
+      font-size: 20px;
+      color: #ffde03;
+    }
   </style>
 </head>
 <body>
@@ -222,14 +228,14 @@
   <div class="container" id="juego" style="display: none;">
     <div id="header-logos">
       <img id="logo-juego" src="img/logo-juego.png" alt="Reto Tech">
-<div>
+      <div>
         <p><strong>Año del Bicentenario:</strong> Consolidación de la Independencia y heroicas batallas de Junín y Ayacucho</p>
         <p><strong>IEST RAMON COPAJA - TARATA</strong></p>
       </div>
-
       <img id="logo-institucion" src="img/logo.png" alt="Instituto Ramón Copaja">
     </div>
     <h2>Selecciona una carta:</h2>
+    <div id="puntaje-container">Puntaje: <span id="puntaje-actual">0</span></div> <!-- Contenedor para mostrar el puntaje -->
     <div id="cartas" class="cartas-container"></div>
     <button id="reiniciar">Reiniciar</button>
   </div>
@@ -253,3 +259,4 @@
   <script src="js/script.js"></script>
 </body>
 </html>
+
