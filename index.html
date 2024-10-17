@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Reto Tech</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <style>
+   <style>
     body {
       background-color: #0e0b16;
       font-family: 'Arial', sans-serif;
@@ -16,7 +16,7 @@
 
     .container {
       max-width: 800px;
-      width: 100%;
+      width: 90%; /* Cambiado a 90% para mejor responsividad */
       margin: 0 auto;
       padding: 20px;
       text-align: center;
@@ -30,7 +30,7 @@
 
     #header-logos {
       display: flex;
-      justify-content: space-between;
+      flex-direction: column; /* Cambiado a columna para mejor responsividad */
       align-items: center;
       padding: 10px;
       background-color: #302b63;
@@ -39,12 +39,12 @@
     }
 
     #logo-juego {
-      width: 140px;
+      width: 120px; /* Tamaño ajustado para dispositivos más pequeños */
       animation: bounce 2s infinite;
     }
 
     #logo-institucion {
-      width: 90px;
+      width: 70px; /* Tamaño ajustado para dispositivos más pequeños */
     }
 
     @keyframes bounce {
@@ -57,7 +57,7 @@
     }
 
     .titulo {
-      font-size: 32px;
+      font-size: 28px; /* Ajustado para pantallas más pequeñas */
       text-shadow: 2px 2px 10px rgba(0, 229, 255, 0.5);
       margin: 20px 0;
       animation: slideIn 1s forwards;
@@ -73,7 +73,7 @@
     }
 
     .nombre-juego {
-      font-size: 24px;
+      font-size: 22px; /* Ajustado para pantallas más pequeñas */
       color: #ffde03;
       animation: fadeIn 1s forwards;
       opacity: 0;
@@ -105,8 +105,8 @@
     }
 
     .carta {
-      width: 180px;
-      height: 260px;
+      width: 150px; /* Ajustado para pantallas más pequeñas */
+      height: 220px; /* Ajustado para pantallas más pequeñas */
       perspective: 1000px;
       transition: transform 0.2s ease; /* Transición más suave */
       animation: float 3s ease-in-out infinite; /* Efecto de flotación */
@@ -149,14 +149,14 @@
     .carta-front {
       background-color: #6a0572;
       color: white;
-      font-size: 22px;
+      font-size: 18px; /* Ajustado para pantallas más pequeñas */
     }
 
     .carta-back {
       background-color: #120e43;
       transform: rotateY(180deg);
       flex-direction: column;
-      padding: 15px;
+      padding: 10px; /* Ajustado para pantallas más pequeñas */
       color: #ffde03;
     }
 
@@ -169,6 +169,7 @@
       border-radius: 5px;
       cursor: pointer;
       transition: background-color 0.3s;
+      width: 100%; /* Asegura que los botones ocupen todo el ancho */
     }
 
     .opcion-btn:hover {
@@ -196,6 +197,7 @@
       border-radius: 10px;
       cursor: pointer;
       transition: background-color 0.3s;
+      width: 100%; /* Asegura que el botón ocupe todo el ancho */
     }
 
     #reiniciar:hover {
@@ -206,6 +208,21 @@
       margin-top: 20px;
       font-size: 20px;
       color: #ffde03;
+    }
+
+    @media (max-width: 600px) {
+      .titulo {
+        font-size: 24px; /* Ajustado para pantallas muy pequeñas */
+      }
+
+      .carta {
+        width: 120px; /* Ajustado para pantallas muy pequeñas */
+        height: 180px; /* Ajustado para pantallas muy pequeñas */
+      }
+
+      #empezar, #reiniciar {
+        font-size: 16px; /* Ajustado para pantallas muy pequeñas */
+      }
     }
   </style>
 </head>
