@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Reto Tech</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-   <style>
+  <style>
     body {
       background-color: #0e0b16;
       font-family: 'Arial', sans-serif;
@@ -16,7 +16,7 @@
 
     .container {
       max-width: 800px;
-      width: 90%; /* Cambiado a 90% para mejor responsividad */
+      width: 100%;
       margin: 0 auto;
       padding: 20px;
       text-align: center;
@@ -30,8 +30,8 @@
 
     #header-logos {
       display: flex;
-      flex-direction: column; /* Cambiado a columna para mejor responsividad */
-      align-items: center;
+      flex-direction: column; /* Cambiado a columna para móviles */
+      align-items: center; /* Centrado horizontalmente */
       padding: 10px;
       background-color: #302b63;
       border-radius: 10px;
@@ -39,12 +39,14 @@
     }
 
     #logo-juego {
-      width: 120px; /* Tamaño ajustado para dispositivos más pequeños */
+      width: 140px;
       animation: bounce 2s infinite;
+      margin-bottom: 10px; /* Espacio entre el logo y el texto */
     }
 
     #logo-institucion {
-      width: 70px; /* Tamaño ajustado para dispositivos más pequeños */
+      width: 90px;
+      margin-top: 10px; /* Espacio entre el texto y el logo de la institución */
     }
 
     @keyframes bounce {
@@ -57,7 +59,7 @@
     }
 
     .titulo {
-      font-size: 28px; /* Ajustado para pantallas más pequeñas */
+      font-size: 32px;
       text-shadow: 2px 2px 10px rgba(0, 229, 255, 0.5);
       margin: 20px 0;
       animation: slideIn 1s forwards;
@@ -73,7 +75,7 @@
     }
 
     .nombre-juego {
-      font-size: 22px; /* Ajustado para pantallas más pequeñas */
+      font-size: 24px;
       color: #ffde03;
       animation: fadeIn 1s forwards;
       opacity: 0;
@@ -105,8 +107,8 @@
     }
 
     .carta {
-      width: 150px; /* Ajustado para pantallas más pequeñas */
-      height: 220px; /* Ajustado para pantallas más pequeñas */
+      width: 180px;
+      height: 260px;
       perspective: 1000px;
       transition: transform 0.2s ease; /* Transición más suave */
       animation: float 3s ease-in-out infinite; /* Efecto de flotación */
@@ -149,14 +151,14 @@
     .carta-front {
       background-color: #6a0572;
       color: white;
-      font-size: 18px; /* Ajustado para pantallas más pequeñas */
+      font-size: 22px;
     }
 
     .carta-back {
       background-color: #120e43;
       transform: rotateY(180deg);
       flex-direction: column;
-      padding: 10px; /* Ajustado para pantallas más pequeñas */
+      padding: 15px;
       color: #ffde03;
     }
 
@@ -169,7 +171,6 @@
       border-radius: 5px;
       cursor: pointer;
       transition: background-color 0.3s;
-      width: 100%; /* Asegura que los botones ocupen todo el ancho */
     }
 
     .opcion-btn:hover {
@@ -197,7 +198,6 @@
       border-radius: 10px;
       cursor: pointer;
       transition: background-color 0.3s;
-      width: 100%; /* Asegura que el botón ocupe todo el ancho */
     }
 
     #reiniciar:hover {
@@ -211,17 +211,34 @@
     }
 
     @media (max-width: 600px) {
+      #header-logos {
+        padding: 20px; /* Aumentar padding para móviles */
+      }
+
+      #logo-juego {
+        width: 100px; /* Tamaño ajustado para pantallas más pequeñas */
+      }
+
+      #logo-institucion {
+        width: 60px; /* Tamaño ajustado para pantallas más pequeñas */
+      }
+
+      #header-logos p {
+        font-size: 14px; /* Tamaño de fuente ajustado para pantallas pequeñas */
+        line-height: 1.4; /* Espaciado entre líneas */
+        margin: 5px 0; /* Espacio entre párrafos */
+      }
+
       .titulo {
-        font-size: 24px; /* Ajustado para pantallas muy pequeñas */
+        font-size: 24px; /* Tamaño de título ajustado */
       }
 
-      .carta {
-        width: 120px; /* Ajustado para pantallas muy pequeñas */
-        height: 180px; /* Ajustado para pantallas muy pequeñas */
+      .nombre-juego {
+        font-size: 20px; /* Tamaño de nombre del juego ajustado */
       }
 
-      #empezar, #reiniciar {
-        font-size: 16px; /* Ajustado para pantallas muy pequeñas */
+      #empezar {
+        font-size: 16px; /* Tamaño de botón ajustado */
       }
     }
   </style>
